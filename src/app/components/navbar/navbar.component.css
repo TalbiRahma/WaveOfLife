@@ -1,0 +1,81 @@
+/* Card styled as a navbar */
+.navbar-card {
+    position: fixed; /* Fixe la card en haut de la page */
+    top: 0; /* Positionner en haut */
+    left: 0;
+    right: 0;
+    z-index: 1050; /* Assurez-vous qu'elle soit au-dessus des autres éléments */
+    width: 100%;
+    max-width: 100%; /* Peut être ajusté si vous voulez limiter la largeur */
+    padding: 10px 0; /* Ajouter de l'espacement autour */
+    background-color: rgba(255, 255, 255, 0.2); /* White background with reduced opacity */
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    margin: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex; /* Flexbox pour l'alignement du contenu */
+    justify-content: space-between;
+    align-items: center; /* Centrer verticalement */
+    padding-left: 20px; /* Espacement à gauche pour positionner le texte */
+}
+
+.card-header h3 {
+    margin: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0); 
+    color: #ffff; /* White text color */
+    font-size: 2rem;
+    text-align: left; /* Aligner à gauche */
+    text-shadow: 
+      0 0 5px rgba(28, 99, 134, 0.782),
+      0 0 10px rgba(28, 99, 134, 0.782),
+      0 0 20px  #ffffff,
+      0 0 30px  #ffffff;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+
+ 
+/* Animation for glowing effect */
+@keyframes neon {
+    0% {
+      text-shadow: 0 0 5px rgba(28, 99, 134, 0.782), 0 0 10px rgba(28, 99, 134, 0.782), 0 0 20px #ffffff, 0 0 30px #ffffff;
+    }
+    50% {
+      text-shadow: 0 0 10px rgba(28, 99, 134, 0.782), 0 0 20px rgba(28, 99, 134, 0.782), 0 0 30px #ffffff, 0 0 40px #ffffff;
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(28, 99, 134, 0.782), 0 0 10px rgba(28, 99, 134, 0.782), 0 0 20px  #ffffff, 0 0 30px  #ffffff;
+    }
+}
+
+
+/* Navbar styles */
+.navbar-nav ul {
+   
+    list-style: none;
+    display: flex;
+    margin-right: 30px;
+    padding: 0;
+}
+
+.navbar-nav ul li {
+    margin-left: 30px; /* Espacement entre les liens */
+}
+
+.navbar-nav ul li a {
+    text-decoration: none;
+    color:rgba(28, 99, 134, 0.782); /* Couleur des liens */
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on navbar links */
+.navbar-nav ul li a:hover {
+    color:rgba(28, 99, 134, 0.5); /* Couleur au survol */
+}
